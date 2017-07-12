@@ -1,0 +1,428 @@
+div[id|=wripl-oauth] {
+    padding: 5px 12px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    text-align: center;
+}
+
+img.wripl-widget-thumbnail.nailthumb-image {
+    margin: 0px;
+}
+
+img.wripl-oauth-connect {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+img.wripl-rotate {
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0px;
+}
+
+.wripl-rotate:hover {
+    -webkit-transform: rotate(720deg);
+    -moz-transform: rotate(720deg);
+    -o-transform: rotate(720deg);
+}
+
+@-webkit-keyframes rotate-webkit {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+@-moz-keyframes rotate-moz {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(359deg);
+    }
+}
+
+@-o-keyframes rotate-o {
+    from {
+        -o-transform: rotate(0deg);
+    }
+    to {
+        -o-transform: rotate(359deg);
+    }
+}
+
+.wripl-rotate {
+    -webkit-animation-name: rotate-webkit;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+
+    -moz-animation-name: rotate-moz;
+    -moz-animation-duration: 1.5s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+
+    -o-animation-name: rotate-o;
+    -o-animation-duration: 4.5s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-timing-function: linear;
+
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+
+    overflow: hidden;
+}
+
+/* TODO: Refactor the following css.. tis a bit messy*/
+#wripl-slider-container {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    background-color: #ffffff;
+    padding-left: 20px;
+    /*width: 370px;*/
+    height: 160px;
+
+    -webkit-box-shadow: 0 8px 6px -6px #c8c8c8;
+    -moz-box-shadow: 0 8px 6px -6px #c8c8c8;
+    box-shadow: 0 8px 6px -6px #c8c8c8;
+
+    border: solid 1px #e6e6e6;
+
+    position: fixed;
+    bottom: 46px;
+    vertical-align: top;
+
+    z-index: 2147483648;
+}
+
+#wripl-slider-container img {
+    max-width: none;
+}
+
+#wripl-slider-container .heading {
+    font-size: 13pt;
+    font-weight: 300;
+    padding: 20px 30px 10px 10px;
+    text-align: center;
+    color: black;
+}
+
+#wripl-slider-container .slider-body {
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#wripl-slider-container .slider-body  img {
+    vertical-align: middle;
+}
+
+#wripl-slider-container .footer {
+    clear: both;
+    font-size: smaller;
+    padding-bottom: 6px;
+    padding-right: 16px;
+    text-align: right;
+    color: #c8c8c8;
+}
+
+#wripl-slider-container .footer img {
+    vertical-align: text-bottom;
+}
+
+#wripl-slider-header {
+    padding: 6px 6px 22px 6px;
+    border-bottom: 1px solid #ededed;
+    margin-right: 10px;
+    margin-left: -10px;
+}
+
+/* START ------- wripl mobile specific styles ---------------------- MOBILE SPECIFIC -------- START*/
+
+.wripl-mobile-slider-active{
+    bottom: 0px !important;
+}
+
+#wripl-slider-container.wripl-mobile {
+    width: 100%;
+    height: 78px;
+    padding: 0px;
+
+    -webkit-box-shadow: 0 -2px 6px #c8c8c8;
+    -moz-box-shadow: 0 -2px 6px #c8c8c8;
+    box-shadow: 0 -2px 6px #c8c8c8;
+
+    /* mobile slider will be flush to the edges of the screen */
+    bottom: -80px;
+    left: 0;
+
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+/* Tricky positioning of the 'get recommendations' button within this element */
+#wripl-slider-container .slider-body.wripl-mobile {
+    padding-top: 16px;
+    padding-left: 15%;
+    width: 65%;
+    float: left;
+}
+
+#wripl-recommendations.wripl-mobile {
+    border-top: 0px;
+    margin-right: 0px;
+    padding: 10px;
+    padding-top: 4px;
+}
+
+#wripl-slider-container.wripl-mobile a {
+    font-size: 1em;
+    text-decoration: none;
+}
+
+#wripl-slider-container.wripl-mobile a:hover {
+    text-decoration: none;
+}
+
+/* Added margin here.. because theme stylesheets with  p *all selectors were overwriting the layout */
+#wripl-slider-container.wripl-mobile p {
+    line-height: 1.4em;
+    margin: 1px;
+    padding-left: 2px;
+    font-size: 12pt;
+}
+
+#wripl-dismiss.wripl-mobile a {
+    padding-top: 28px; /* The arrows's position from the top of the slider */
+    padding-left: 6px;
+    font-size: 0.8em;
+}
+
+#wripl-slider-container.wripl-mobile a.dismiss:hover {
+    border: 0px;
+}
+
+#wripl-dismiss.wripl-mobile {
+    float: right;
+    width: 30px;
+    height: 100%;
+    border-left: 1px solid #ededed;
+}
+
+/* So this selector does not appear in any of the templates but it is created on the fly */
+.nailthumb-container {
+    float: right;
+    border: 1px solid #e0dfdf;
+}
+
+#wripl-slider-container .heading-sml.wripl-mobile {
+    font-size: 8pt;
+    float: none;
+    padding-left: 4px;
+}
+
+a#post_title:hover {
+    text-decoration: underline;
+}
+
+#wripl-main.wripl-mobile {
+    float: left;
+    width: 82%;
+}
+
+#wripl-slider-container.wripl-mobile .nailthumb-container {
+    float: left;
+    margin: 0px;
+    margin-right: 10px;
+}
+
+/* END END END ------ wripl mobile specific styles ---------------------- MOBILE SPECIFIC---- END END END*/
+
+/* This rule is explicitly for removing the .nailthumb-container rule of float right  */
+div#wripl-widget-container .nailthumb-container {
+    float: none;
+    margin-top: 4px;
+}
+
+.widgets {
+    display: inline;
+}
+
+a#post_title {
+    text-decoration: none;
+    font-size: 14pt;
+    color: black;
+}
+
+a#post_title:hover {
+    text-decoration: underline;
+}
+
+#wripl-slider-container .heading-sml {
+    float: left;
+    color: #e77b12;
+    font-weight: 600;
+    font-size: 10pt;
+}
+
+#wripl-recommendations {
+    margin-right: 14px;
+    padding-top: 14px;
+    padding-right: 6px;
+    margin-left: -6px;
+}
+
+#wripl-functions {
+    float: right;
+    font-weight: 500;
+    font-size: 8pt;
+}
+
+#wripl-functions a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#wripl-functions a:hover {
+    text-decoration: underline;
+    color: #999999;
+}
+
+#wripl-main {
+    float: left;
+    width: 348px;
+}
+
+#wripl-dismiss {
+    float: right;
+    width: 20px;
+    height: 100%;
+    border-left: 1px solid #ededed;
+}
+
+#wripl-dismiss a {
+    padding-top: 68px; /* The arrows's poisition from the top of the slider */
+    padding-left: 2px;
+    font-size: smaller;
+}
+
+a.fill-div-link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.show-left-pointer {
+    cursor: w-resize;
+}
+
+.wripl-widget-title-over-image {
+    position: absolute;
+    bottom: 24px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 1px;
+    max-width: 96%;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 4px 8px;
+    color: white;
+}
+
+/* --------- END OF CONTENT --------- */
+
+#wripl-end-of-content-container{
+    border: 0;
+    margin: 0 0 10px;
+    padding: 0;
+    outline: 0;
+    background: 0;
+    overflow: hidden;
+    width: 100%;
+    clear: both;
+
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -khtml-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    clear: both;
+}
+
+
+.wripl-end-of-content-container img {
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+}
+
+.wripl-eoc-img{
+    clear: both;
+}
+
+.nailthumb-eoc-container{
+    float: left;
+    border: 1px solid #e0dfdf;
+}
+
+.wripl-eoc-inner{
+    clear: both;
+    width: 100%;
+    max-height: 190px;
+    overflow: hidden;
+}
+
+.wripl-eoc-item{
+    float: left;
+    height: 210px;
+}
+
+.wripl-eoc-post-title {
+    width: 126px;
+    line-height: 1.4;
+    display: block;
+    word-wrap: break-word;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 400;
+    border: 0px;
+    padding: 4px;
+    margin-top: 126px;
+    outline: 0px;
+}
+
+/* --------- QR DIALOG --------- */
+
+#wripl-qr-dialog {
+    padding: 0px;
+    z-index: 2147483649;
+
+}
+#wripl-qr-dialog p {
+    /*padding: 4px;*/
+    text-align: center;
+    font-size: 10pt;
+}
+
+div.wripl-powered {
+    text-align: right;
+}

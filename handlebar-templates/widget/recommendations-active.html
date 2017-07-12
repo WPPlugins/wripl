@@ -1,0 +1,32 @@
+<ul>
+
+    {{#recommendations}}
+
+    {{#if imageSrc}}
+        <li class="image-recommendation">
+            <div style="position: relative">
+                <a href="{{permalink}}">
+                    <div class="nailthumb-container" style="height:{{imageHeight}}px; overflow: hidden;">
+                        <img class="wripl-widget-thumbnail " src="{{imageSrc}}" alt="{{{post_title}}}">
+                        <div class="wripl-widget-title-over-image" >
+                            {{{post_title}}}
+                        </div>
+                        </div>
+
+                    <br>
+                </a>
+            </div>
+        </li>
+
+    {{else}}
+        <li class="text-recommendation"><a href="{{permalink}}">{{{post_title}}}</a></li>
+    {{/if}}
+
+    {{/recommendations}}
+</ul>
+
+<div id="wripl-oauth-disconnect-button">
+    <a href="http://wripl.com/interests"
+       target="_blank">see your interests</a> |
+    <a href="{{wriplAjaxProperties.pluginPath}}disconnect.php">disconnect</a>
+</div>

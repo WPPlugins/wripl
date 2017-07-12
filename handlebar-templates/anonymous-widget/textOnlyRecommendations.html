@@ -1,0 +1,13 @@
+<ul>
+    {{#recommendations}}
+    <li class="text-recommendation"><a href="{{linkUrl}}&region=wordpress_anonymous_widget_textonly" title="{{{title}}}">{{{title}}}</a></li>
+    {{/recommendations}}
+</ul>
+
+{{#if wriplProperties.hideWriplBranding}}
+<!--Powered by wripl.com-->
+{{else}}
+<div class="wripl-powered">
+    <a href="http://wripl.com/features" target="_blank">Powered by wripl.com</a>
+</div>
+{{/if}}
